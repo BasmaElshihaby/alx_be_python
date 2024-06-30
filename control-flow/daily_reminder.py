@@ -17,7 +17,7 @@ match priority:
         reminder = f"'{task}' has an undefined priority"
 
 # Adjust reminder based on time sensitivity
-if time_bound.lower() == "yes":  # Ensure this line matches the pattern exactly
+if time_bound == "yes":  # Ensure this line matches the pattern exactly
     reminder += " that requires immediate attention today!"
 else:
     reminder += ". Consider completing it when you have free time."
