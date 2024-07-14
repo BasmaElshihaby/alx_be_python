@@ -4,10 +4,10 @@ class Book:
         self.author = author
         self.__is_checked_out = False
 
-    def change_status(self,):
+    def change_status(self):
         self.__is_checked_out = True
 
-    def rechange_status(self):
+    def return_book(self):
         self.__is_checked_out = False
 
     def check_status(self):
@@ -33,7 +33,7 @@ class Library:
     def return_book(self, title):
         for item in self.__books:
             if item.title == title:
-                item.rechange_status()
+                item.return_book()
 
     def list_available_books(self):
         for item in self.__books:
